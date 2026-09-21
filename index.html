@@ -16,10 +16,15 @@
 <body>
   <div class="noise"></div>
 
+
   <header class="site-header">
-    <a class="brand" href="#top">#まんてんあみてん2027</a>
+    <a class="brand ticket-trigger" href="https://livepocket.jp/e/vloe4">
+      <span>#まんてんあみてん2027</span>
+      <small class="brand-hint">   ← Click here</small>
+    </a>
 
     <nav class="nav">
+      <a href="#top">TOP</a>
       <a href="#poster">NEWS</a>
       <a href="#message">MESSAGE</a>
       <a href="#story">STORY</a>
@@ -116,11 +121,29 @@
       </div>
 
       <div class="message-paper">
-        <p>あみちゃんへ、</p>
+        <p>あみちゃんに、</p>
         <p>たくさんの愛と、最高の笑顔を届けよう。</p>
-        <p>みんなでつくる、最高の生誕祭にしようね！</p>
+        <p>みんなでつくる、最高の生誕祭にしよう！</p>
         <p class="signature">from ぽっぱー</p>
       </div>
+
+      <div class="random-message-box">
+        <p class="eyebrow">MESSAGE</p>
+        <h3>あみてんへ届けよう！</h3>
+        <p>ボタンを押すと、お祝いのメッセージを作成できるよ。</p>
+        <p>あなたからの「おめでとう」の気持ちがうれしいはず。</p>
+        <p id="birthday-message" class="generated-message" aria-live="polite">
+          ここにメッセージが表示されるよ！
+        </p>
+        <button type="button" id="message-generator" class="message-button">
+          メッセージを作成！
+        </button>
+        <button type="button" id="post-to-x" class="x-post-button" disabled>
+          𝕏 に投稿する！
+        </button>
+
+</div>
+
     </section>
 
     <section id="story" class="story section-grid dark-panel">
@@ -133,7 +156,7 @@
 
         <p class="body-copy">
           出会いも、笑顔も、ステージの瞬間も。<br>
-          あみてんの物語は、これからも続いていく。
+          あみてんの物語は、まだまだ続く。
         </p>
 
         <a class="outline-cta" href="#information">VIEW MORE ↗</a>
@@ -198,6 +221,21 @@
     </section>
 
   </main>
+  <div class="ticket-modal" id="ticket-modal" role="dialog" aria-modal="true" aria-labelledby="ticket-modal-title" hidden>
+    <div class="ticket-modal-backdrop" data-ticket-close></div>
+
+    <div class="ticket-modal-card">
+      <button class="ticket-modal-close" type="button" aria-label="閉じる" data-ticket-close>×</button>
+
+      <p class="ticket-modal-kicker">HAPPY BIRTHDAY AMI</p>
+
+      <h2 id="ticket-modal-title">🎉 生誕祭へ行こう 🎉</h2>
+
+      <p>あみてんに会いに行く準備はできた？</p>
+
+      <strong>TICKETページへGO!!!!!!!</strong>
+    </div>
+  </div>
 
   <a class="cta wide" href="#top">BACK TO TOP <span>↑</span></a>
 
