@@ -178,7 +178,7 @@ h1 em { color: var(--ink); font-style: normal; font-size: .73em; }
 @media (max-width: 768px) {
   html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
 
-  .site-header { padding: 16px 20px; }
+  .site-header { position: sticky; top: 0; z-index: 10; }
   .nav { display: none; }
   .menu-button { display: block; }
   .nav.open { display: flex; position: absolute; top: 100%; left: 0; right: 0; z-index: 11; padding: 18px 20px; background: var(--green); border-top: 2px solid var(--ink); flex-direction: column; gap: 18px; }
