@@ -16,14 +16,13 @@
 <body>
   <div class="noise"></div>
 
-
   <header class="site-header">
     <a class="brand ticket-trigger" href="https://livepocket.jp/e/vloe4">
       <span>#まんてんあみてん2027</span>
-      <small class="brand-hint">   ← Click here</small>
+      <small class="brand-hint">← Click here</small>
     </a>
 
-    <nav class="nav">
+    <nav class="nav" id="site-nav">
       <a href="#top">TOP</a>
       <a href="#poster">NEWS</a>
       <a href="#message">MESSAGE</a>
@@ -31,7 +30,13 @@
       <a href="#information">INFO</a>
     </nav>
 
-    <button class="menu-button" aria-label="メニュー" aria-expanded="false">☰</button>
+    <button
+      class="menu-button"
+      type="button"
+      aria-label="ナビゲーションを開く"
+      aria-expanded="false"
+      aria-controls="site-nav"
+    >☰</button>
   </header>
 
   <main id="top">
@@ -130,20 +135,21 @@
       <div class="random-message-box">
         <p class="eyebrow">MESSAGE</p>
         <h3>あみてんへ届けよう！</h3>
-        <p>ボタンを押すと、お祝いのメッセージを作成できるよ。</p>
+        <p>ボタンを押すと、お祝いのメッセージが作成できるよ。</p>
         <p>あなたからの「おめでとう」の気持ちがうれしいはず。</p>
+
         <p id="birthday-message" class="generated-message" aria-live="polite">
           ここにメッセージが表示されるよ！
         </p>
+
         <button type="button" id="message-generator" class="message-button">
           メッセージを作成！
         </button>
+
         <button type="button" id="post-to-x" class="x-post-button" disabled>
           𝕏 に投稿する！
         </button>
-
-</div>
-
+      </div>
     </section>
 
     <section id="story" class="story section-grid dark-panel">
@@ -221,11 +227,24 @@
     </section>
 
   </main>
-  <div class="ticket-modal" id="ticket-modal" role="dialog" aria-modal="true" aria-labelledby="ticket-modal-title" hidden>
+
+  <div
+    class="ticket-modal"
+    id="ticket-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="ticket-modal-title"
+    hidden
+  >
     <div class="ticket-modal-backdrop" data-ticket-close></div>
 
     <div class="ticket-modal-card">
-      <button class="ticket-modal-close" type="button" aria-label="閉じる" data-ticket-close>×</button>
+      <button
+        class="ticket-modal-close"
+        type="button"
+        aria-label="閉じる"
+        data-ticket-close
+      >×</button>
 
       <p class="ticket-modal-kicker">HAPPY BIRTHDAY AMI</p>
 
@@ -244,8 +263,9 @@
     <span>made with love by ぽっぱー</span>
 
     <small class="disclaimer">
-      このサイトは、ファンが作成した非公式のお祝いページです。運営・事務所とは関係ありません。<br>
-      ライブ・チケットの最新情報は必ず公式アカウントをご確認ください。
+      このサイトは、ファン有志が制作した非公式のお祝いページです。<br>
+      本人および関係各所とは一切関係ありません。<br>
+      ライブやチケットに関する最新情報は、公式アカウントをご確認ください。
     </small>
   </footer>
 
