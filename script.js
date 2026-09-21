@@ -177,22 +177,24 @@ if (messageGenerator && birthdayMessage) {
     do {
       randomIndex = Math.floor(Math.random() * birthdayMessages.length);
     } while (randomIndex === previousMessageIndex);
+
     previousMessageIndex = randomIndex;
     currentMessage = birthdayMessages[randomIndex];
     birthdayMessage.textContent = currentMessage;
-    if (postToX) {
-      postToX.disabled = false;
-    }
   });
 }
 
 if (postToX) {
+  postToX.disabled = false;
+
   postToX.addEventListener("click", () => {
-    if (!currentMessage) return;
-    const postText =
-      `${currentMessage}\n\n#まんてんあみてん2027\n${siteUrl}`;
+    const postText = currentMessage
+      ? `${currentMessage}\n\n#まんてんあみてん2027\n${siteUrl}`
+      : `#まんてんあみてん2027\n${siteUrl}`;
+
     const xUrl =
       `https://twitter.com/intent/tweet?text=${encodeURIComponent(postText)}`;
+
     window.open(xUrl, "_blank", "noopener,noreferrer");
   });
 }
