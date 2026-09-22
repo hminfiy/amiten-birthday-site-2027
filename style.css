@@ -251,3 +251,39 @@ h1 em { color: var(--ink); font-style: normal; font-size: .73em; }
 .confetti { position: fixed; top: -30px; z-index: 10000; width: 9px; height: 16px; pointer-events: none; animation: confetti-fall 5s linear forwards; }
 @keyframes confetti-fall { 0% { opacity: 1; transform: translateY(0) translateX(0) rotate(0deg); } 25% { transform: translateY(25vh) translateX(20px) rotate(180deg); } 50% { transform: translateY(50vh) translateX(-20px) rotate(360deg); } 75% { transform: translateY(75vh) translateX(15px) rotate(540deg); } 100% { opacity: 0; transform: translateY(110vh) translateX(-15px) rotate(720deg); } }
 @keyframes confetti-fall { to { transform: translateY(110vh) rotate(720deg); opacity: 0; } }
+
+.coming-soon-card {
+  height: 340px;
+  background: var(--green);
+  border: 6px solid white;
+  box-shadow: 7px 7px 0 var(--yellow);
+  box-sizing: border-box;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.coming-soon-content span {
+  display: block;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: .04em;
+}
+.coming-soon-content small {
+  display: block;
+  margin-top: 20px;
+  color: var(--yellow);
+  font-size: .6rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+@media (max-width: 700px) {
+  .coming-soon-card {
+    height: 280px;
+  }
+}
