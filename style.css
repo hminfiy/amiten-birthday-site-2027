@@ -122,10 +122,32 @@ h1 em { color: var(--ink); font-style: normal; font-size: .73em; }
 /* ===== Photo collage ===== */
 
 .photo-collage { position: relative; min-height: 380px; }
+
 .photo-placeholder { position: absolute; display: block; width: 50%; height: 50%; background: var(--green); color: var(--ink); border: 8px solid white; box-shadow: 7px 7px 0 var(--lime); font-size: 1.1rem; font-weight: 900; object-fit: cover; transform: rotate(-8deg); }
+
 .photo-a { top: 0; left: 3%; background: var(--yellow); }
+
 .photo-b { top: 25%; right: 0; background: var(--green); transform: rotate(8deg); }
+
 .photo-c { bottom: 0; left: 25%; background: var(--lime); transform: rotate(-2deg); }
+
+/* ===== AMI Photo Gallery ===== */
+
+.photo-gallery { grid-column: 1 / -1; width: 100%; min-width: 0; margin-top: 80px; }
+.gallery-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; color: white; font-weight: 800; letter-spacing: .08em; }
+.gallery-heading small { font-size: .6rem; color: var(--lime); }
+.photo-scroll { display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; align-items: flex-start; gap: 20px; width: 100%; max-width: 100%; overflow-x: scroll !important; overflow-y: hidden !important; padding: 8px 8px 20px; }
+.photo-card { display: block !important; flex: 0 0 260px !important; width: 260px !important; min-width: 260px !important; }
+.photo-card img { display: block; width: 260px !important; height: 340px !important; object-fit: cover; border: 6px solid white; box-shadow: 7px 7px 0 var(--yellow); box-sizing: border-box; }
+.photo-card p { margin: 14px 0 0; color: white; font-family: "Kosugi Maru", sans-serif; font-size: .85rem; font-weight: 700; line-height: 1.6; }
+.photo-scroll::-webkit-scrollbar { height: 6px; }
+.photo-scroll::-webkit-scrollbar-thumb { background: var(--yellow); }
+
+@media (max-width: 700px) {
+  .photo-gallery { margin-top: 50px; }
+  .photo-card { flex: 0 0 210px !important; width: 210px !important; min-width: 210px !important; }
+  .photo-card img { width: 210px !important; height: 280px !important; }
+}
 
 /* ===== Poster ===== */
 
